@@ -1,7 +1,8 @@
 ﻿#include <iostream>
+// Для запуска проекта нажать ctrl + f5
+using namespace std;
 
 int main()
 {
-    std::cout << "Hello World!\n";
-	int a = 6;
+    cout << "Hello World!\n";
 }

@@ -5,26 +5,33 @@ using namespace std;
 
 const double E = 10e-5;
 
+void cos();
+
 int main()
 {
+	cos();
+}
+
+void cos()
+{
 	double x = 0;
-	double s = 0;
 	cout << "What is your argument for cos(x)?";
 	cin >> x;
 	int c = 1;
 	int n = 0;
-	double a = 1;  
+	double a = 1;
 	double p = 1;
 	double q = 1;
+	double s = 1;
 	while (abs(a) > E)
+
 	{
-		s += a;  
-		c *= -1;  // Знак слагаемого 
-		p *= x * x;  // x^(2n)
+		c *= -1;
+		p *= x * x;
 		n += 2;
-		q *= n;  // 2n! - Двойной факториал 
+		q *= n * (n - 1);
 		a = c * p / q;
-		cout << a << endl;
+		s += a;
 	}
 	cout << "Your result is ";
 	cout << s;
